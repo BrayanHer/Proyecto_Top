@@ -6,7 +6,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>&nbsp;{{Session::get('sesionname')}}</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Wuaf - Here !</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -59,7 +59,7 @@
                   <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                 </div>
                 <nav class="nav navbar-nav">
-                    <h3 align="center"><i class="fa fa-paw" aria-hidden="true"></i> &nbsp;Wuaf - Here !</h3>
+                    <h3 align="center"><i class="fa fa-paw" aria-hidden="true"></i>  <span style="font-style: italic;">&nbsp;{{Session::get('sesionuser')}} </span> </h3>
 
               </nav>
             </div>

@@ -1,4 +1,5 @@
-<form class="">
+<form action="{{route('G_Adopcion')}}" method="POST">
+{{csrf_field()}}
             <div class="form-row">
                 <div class="col-md-8">
                     <div class="position-relative form-group">
@@ -8,8 +9,13 @@
                 </div>
                 <div class="col-md-4">
                     <div class="position-relative form-group">
-                        <label for="nom_mascota" class="">Nombre del perrito que quiere adoptar <red>*</red></label>
-                        <input name="nom_mascota" id="nom_mascota" placeholder="Nombre del perrito que quiere adoptar" type="text" class="form-control">
+                        <label for="animales" class="">Nombre del perrito que quiere adoptar </label>
+                        <select name="Madopcion" class="mb-2 form-control">
+                            <option disabled>Selecciona una opción</option>
+                            @foreach($Mascotas as $Mat)
+                            <option value="{{$Mat->IdMas}}">{{$Mat->Nombre}}-{{$Mat->Raza}}-{{$Mat->Especie}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -135,8 +141,6 @@
                 <div class="col-md-12">
                     <div class="position-relative form-group">
                         <label class="">¿Qué tipo de animales son?(si no cuenta con ningun animal no seleccione ninguna)</label>
-                        
-                        
                             <div>
                                 <div class="custom-checkbox custom-control custom-control-inline">
                                     <input name="perros" type="checkbox" id="perros" class="custom-control-input">

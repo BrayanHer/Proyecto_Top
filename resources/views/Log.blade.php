@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V15</title>
+	<title>Wuaf - Here!</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="./Login/images/icons/favicon.ico"/>
+<link rel="icon" href="././Sistema/images/favicon.ico" type="image/ico" />
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="./Login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -42,12 +42,12 @@
         {{csrf_field()}}
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Usuario</span>
-						<input class="input100" type="text"  placeholder="Ingrese su Usuario">
+						<input class="input100" type="text"  placeholder="Ingrese su Usuario" name="usuario" id="usuario">
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Contraseña</span>
-						<input class="input100" type="password"  placeholder="Ingrese su contraseña">
+						<input class="input100" type="password"  placeholder="Ingrese su contraseña" name="Password" id="Password">
 					</div>
 
 						<div>

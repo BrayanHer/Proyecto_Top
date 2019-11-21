@@ -90,7 +90,7 @@
         </p>
     </div>
 </div>
-<a href="{{route('Adopcion')}}">
+<a href="{{route('Adoptar')}}">
 <div class="row">
     <div class="col-md-12 col-xl-12 col-lg-12 d-flex justify-content-center">
     

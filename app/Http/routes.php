@@ -27,3 +27,8 @@ Route::get('Requisitos','vistas@Requisitos')->name('Requisitos');
 
 Route::get('In','login@In')->name('In');
 Route::POST('/iniciasesion','login@iniciasesion')->name('iniciasesion');
+
+// A D O P C I O N
+Route::get('Adoptar','Adopcion@Adoptar')->name('Adoptar');
+Route::get('F_Adoptar','Adopcion@F_Adoptar')->name('F_Adoptar');
+Route::Post('G_Adopcion','Adopcion@G_Adopcion')->name('G_Adopcion');

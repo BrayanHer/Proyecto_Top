@@ -19,12 +19,12 @@ class login extends Controller
 
         $usuario  = $request->usuario;
         $passw    = $request->Password;
-  
+
         $consulta = usuarios::withTrashed()->where('usuario','=',$usuario)
                         ->where ('contraseña','=',$passw)
                        ->get();
-      
-  
+    
+
           if(count($consulta)==0){
            Session::flash('error', 'El usuario no existe o su clave confidencial no es correcta');
               return redirect()->route('Inicio');

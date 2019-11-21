@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Session;
 
 class vistas extends Controller
 {
     public function Inicio(){
+        
         return view('index');
     }
     public function Entrada(){
