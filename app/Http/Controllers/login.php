@@ -20,8 +20,8 @@ class login extends Controller
         $usuario  = $request->usuario;
         $passw    = $request->Password;
 
-        $consulta = usuarios::withTrashed()->where('usuario','=',$usuario)
-                        ->where ('contraseña','=',$passw)
+        $consulta = usuarios::withTrashed()->where('email_usuario','=',$usuario)
+                        ->where ('pass_usuario','=',$passw)
                        ->get();
     
 
@@ -37,10 +37,11 @@ class login extends Controller
               }
               else{
                 
-               Session::put('sesionname',$consulta[0]->nombre);
-               Session::put('sesionidu',$consulta[0]->idu);
-               Session::put('sesionpass',$consulta[0]->contraseña);
-               Session::put('sesionuser',$consulta[0]->usuario);
+               Session::put('sesionname',$consulta[0]->nom_usuario);
+               Session::put('sesionidu',$consulta[0]->id_usuario);
+               Session::put('sesionpass',$consulta[0]->pass_usuario);
+               Session::put('sesionuser',$consulta[0]->email_usuario);
+               Session::put('sesiontipouser',$consulta[0]->tipo_usuario);
                
          
                $sname = Session::get('sesionname');
@@ -70,7 +71,9 @@ class login extends Controller
            public function cerrarsesion(){
             Session::forget('sesionname');
             Session::forget('sesionidu');
-            Session::forget('sesiontipo');
+            Session::forget('sesionpass');
+            Session::forget('sesionuser');
+            Session::forget('sesiontipouser');
             Session::flush();
             Session::flash('error', 'Sesión Cerrada Correctamente');
             return redirect()->route('Inicio');

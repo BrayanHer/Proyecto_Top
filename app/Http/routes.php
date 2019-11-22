@@ -32,3 +32,12 @@ Route::POST('/iniciasesion','login@iniciasesion')->name('iniciasesion');
 Route::get('Adoptar','Adopcion@Adoptar')->name('Adoptar');
 Route::get('F_Adoptar','Adopcion@F_Adoptar')->name('F_Adoptar');
 Route::Post('G_Adopcion','Adopcion@G_Adopcion')->name('G_Adopcion');
+
+//REPORTE SOLICITUD
+Route::get('Solicitudes','Solicitudes@Solicitudes')->name('Solicitudes');
+Route::get('Aceptado','Solicitudes@Aceptado')->name('Aceptado');
+Route::get('Rechazado','Solicitudes@Rechazado')->name('Rechazado');
+Route::get('Entregado','Solicitudes@Entregado')->name('Entregado');
+
+//MASCOTAS EN ADOPCION
+Route::get('Mascotas','Solicitudes@Mascotas')->name('Mascotas');

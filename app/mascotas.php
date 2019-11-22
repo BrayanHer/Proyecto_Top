@@ -10,8 +10,9 @@ class mascotas extends Model
 {
     use SoftDeletes;
     protected $table = 'mascotas';
-    protected $primaryKey = 'IdMas';
-    protected $fillable = ['mascotas','IdMas','Nombre','Edad ','Especie','Raza'];
+    protected $primaryKey = 'id_mascota';
+    protected $fillable = ['nombre_mascota','tipo_mascota','raza_mascota','cumple_mascota ','genero','castrado',
+    'altura','peso','id_chip','archivo ','status_mascota'];
     
     protected $data = ['deleted_at'];
 }

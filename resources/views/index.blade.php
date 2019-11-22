@@ -25,7 +25,6 @@
                   <li><a><i class="fa fa-edit"></i> Formularios de Adopcion <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{route('Requisitos')}}">Adoptame</a></li>
-     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-map-marker" aria-hidden="true"></i> Localizacion GPS<span class="fa fa-chevron-down"></span></a>
@@ -33,9 +32,15 @@
                       <li><a href="general_elements.html">Buscar</a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-table"></i> Mis Mascotas <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{route('Mascotas')}}">Mascotas</a></li>
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-table"></i> Mis Usuarios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="tables.html">Registros</a></li>
+                      <li><a href="{{route('Solicitudes')}}">Solicitudes</a></li>
                     </ul>
                   </li>
                   <li><a href="{{route('Entrada')}}"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
@@ -68,16 +73,9 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-              @yield('contenido')
-                </div>
-              </div>
-            </div>
-      </div>
-    </div>
+          <div class="x_panel">
+            @yield('contenido')
+          </div>   
+        </div>
   </body>
 @stop

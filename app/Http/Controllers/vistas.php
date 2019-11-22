@@ -6,13 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\mascotas;
 use Session;
 
 class vistas extends Controller
 {
     public function Inicio(){
+        $mascotas = mascotas::withTrashed()
+                        ->orderBy('created_at', 'asc')
+                        ->get();
         
-        return view('index');
+        return view('Contenido.Inicio')->with('mascotas', $mascotas);
     }
     public function Entrada(){
         return view('Log');
